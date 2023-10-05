@@ -1,0 +1,22 @@
+.main-container{
+    width: auto;
+    height: 100vh;
+    border: 1px solid black;
+    background: rebeccapurple;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.local-container{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+}
+
+.remote-container{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+}
+

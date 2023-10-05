@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import VideoRoom from './Components/VideoRoom/VideoRoom';
 import './App.css';
+import { useEffect, useRef, useState } from 'react';
 
 function App() {
+
+  const refu=useRef();
+  const [client,setClient]=useState(null);
+  const[incall,setIncall]=useState(false);
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <h1>Video Call WebRtc</h1>
+        <VideoRoom></VideoRoom>
     </div>
   );
 }
