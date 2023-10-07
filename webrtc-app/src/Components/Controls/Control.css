@@ -1,0 +1,12 @@
+.control-container{
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    border: 1px solid black;
+    background: white;
+    border-radius: 18px;
+    margin-top:  30px;
+}
+.form-container{
+    display: flex;
+}
