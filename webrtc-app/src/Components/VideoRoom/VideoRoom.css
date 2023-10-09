@@ -1,12 +1,11 @@
 .main-container{
     width: fit-content;
     height: fit-content;
-    display: flex;
     justify-content: space-between;
     margin: auto;
     background: white;
     border: 1px solid;
-    border-radius: 18px;
+    border-radius: 7px;
 }
 
 

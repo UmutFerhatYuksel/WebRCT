@@ -48,11 +48,11 @@ const ContextProvider=({children})=>{
         });
 
         peer.on('stream',(currentStream)=>{
-            userVideo.current.srcObj=currentStream; 
+            userVideo.current.srcObject=currentStream; 
         });
 
 
-        socket.on('callAccepted',(signal)=>{
+        socket.on('callaccepted',(signal)=>{
             setCallAccepted(true);
 
             peer.signal(signal);
@@ -70,7 +70,7 @@ const ContextProvider=({children})=>{
 
         connectionRef.current.destroy();
 
-        window.location.reload();
+        // window.location.reload();
     }
 
     const answercall=()=>{
@@ -79,11 +79,11 @@ const ContextProvider=({children})=>{
         const peer=new Peer({initiator:false,trickle:false,stream});
 
         peer.on('signal',(data)=>{
-            socket.emit('answercall',{signal:data,to:call.from,stream});
+            socket.emit('answercall',{signal:data,to:call.from});
         });
 
         peer.on('stream',(currentStream)=>{
-                userVideo.current.srcObj=currentStream;
+                userVideo.current.srcObject=currentStream;
 
         });
 

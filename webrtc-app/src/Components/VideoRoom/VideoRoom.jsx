@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import './VideoRoom.css';
-import { SocketContext } from '../../Context/SocketContext';
+import { SocketContext } from '../../SocketContext';
+import { Grid } from '@mui/material';
 
 const VideoRoom = () => {
   const { name, callAccepted, myVideo, userVideo, callEnded, stream, call } = useContext(SocketContext);
@@ -16,27 +17,18 @@ const VideoRoom = () => {
     <div className='video-container'>
       {stream &&
         <div className='main-container'>
-
-          <div className='local-container'>
             <h2>{name}</h2>
-            <video id='my-video' height={"300px"} width={"500px"} playsInline muted autoPlay ref={myVideo}></video>
-          </div>
+            <video id='my-video' height="300px" width="500px"  muted autoPlay ref={myVideo}/>
 
         </div>
       }
 
-      {callAccepted && !callEnded &&
+      {callAccepted && !callEnded &&(
         <div className='main-container'>
           <h2>{call.name}</h2>
-          <div className='local-container' >
-            <video playsInline autoPlay ref={userVideo} id='user-video' height={"300px"} width={"500px"} ></video>
-          </div>
+            <video playsInline autoPlay  id='user-video' height="300px" width="500px" ref={userVideo}/>
         </div>
-      }
-
-
-
-
+      )}
 
     </div>
 

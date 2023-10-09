@@ -1,8 +1,8 @@
-import { Box, Button, Paper, TextField } from "@mui/material";
-import { ContentPaste, Label, Phone, PhoneDisabled } from '@mui/icons-material'
+import { Box, Button, TextField } from "@mui/material";
+import { ContentPaste, Phone, PhoneDisabled } from '@mui/icons-material'
 import React, { useContext, useState } from "react";
 import './Control.css';
-import { SocketContext } from "../../Context/SocketContext";
+import { SocketContext } from "../../SocketContext";
 
 
 
