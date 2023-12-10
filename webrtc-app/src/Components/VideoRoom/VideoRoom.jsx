@@ -17,7 +17,7 @@ const VideoRoom = () => {
     <div className='video-container'>
       {stream &&
         <div className='main-container'>
-            <h2>{name}</h2>
+            <h2>{name}annem</h2>
             <video id='my-video' height="300px" width="500px"  muted autoPlay ref={myVideo}/>
 
         </div>
